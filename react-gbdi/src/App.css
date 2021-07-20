@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.test-style-from-app-css {
+  color: rgb(48, 136, 99);
+  color:#2797b6
+}

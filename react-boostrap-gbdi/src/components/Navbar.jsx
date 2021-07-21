@@ -8,20 +8,45 @@ const CustomizedNavbar = () => {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
-            <img src="/img/logo192.png" alt="gbdi-logo" />
+            <img
+              src="/img/logo192.png"
+              width="30"
+              height="30"
+              alt="gbdi-logo"
+            />
             GBDi
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               {/* ถ้าไม่ใส่ exact จะ active ตลอด */}
-              <NavLink className="nav-link" to="/" activeClassName="active" exact>
+              <NavLink
+                className="nav-link"
+                to="/"
+                activeClassName="active"
+                exact
+              >
                 Home
               </NavLink>
-              <NavLink className="nav-link" to="/product" activeClassName="active">
+              <NavLink
+                className="nav-link"
+                to="/product"
+                activeClassName="active"
+              >
                 Product
               </NavLink>
-              <NavLink className="nav-link" to="/about" activeClassName="active">
+              <NavLink
+                className="nav-link"
+                to="/category"
+                activeClassName="active"
+              >
+                Category
+              </NavLink>
+              <NavLink
+                className="nav-link"
+                to="/about"
+                activeClassName="active"
+              >
                 About
               </NavLink>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">

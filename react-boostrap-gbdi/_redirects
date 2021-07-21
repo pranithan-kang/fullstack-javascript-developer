@@ -1,0 +1,2 @@
+# Tell netlify to redirect to index.html (to let react-router-dom working)
+/* /index.html

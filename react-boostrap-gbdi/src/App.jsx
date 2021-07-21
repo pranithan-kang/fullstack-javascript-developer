@@ -3,11 +3,16 @@
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "./App.css";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import Index from "./pages/category/Index";
+import Create from "./pages/category/Create";
+import Edit from "./pages/category/Edit";
 
 function App() {
   return (
@@ -18,6 +23,22 @@ function App() {
           <Route path="/product">
             <Product />
           </Route>
+          <Route
+            path="/category"
+            render={({ match: { url } }) => (
+              <>
+                <Route path={`${url}/`} exact>
+                  <Index />
+                </Route>
+                <Route path={`${url}/create`}>
+                  <Create />
+                </Route>
+                <Route path={`${url}/edit/:id`} exact>
+                  <Edit />
+                </Route>
+              </>
+            )}
+          />
           <Route path="/about">
             <About />
           </Route>

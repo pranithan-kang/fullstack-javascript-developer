@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import Index from "./pages/category/Index";
 import Create from "./pages/category/Create";
 import Edit from "./pages/category/Edit";
+import Hospital from "./pages/hospital/Hospital";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
           />
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/hospital">
+            <Hospital />
           </Route>
           <Route path="/" component={Home} />
           {/* NOTE: Another form

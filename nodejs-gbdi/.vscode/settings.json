@@ -5,5 +5,33 @@
     "local": {
       "base_url": "http://localhost:4000"
     }
-  }
+  },
+  "sqltools.connections": [
+    {
+      "pgOptions": {
+        "ssl": {
+          "rejectUnauthorized": false,
+          "requestCert": true
+        }
+      },
+      "previewLimit": 50,
+      "server": "db-pg-do-user-998710-0.b.db.ondigitalocean.com",
+      "port": 25060,
+      "driver": "PostgreSQL",
+      "name": "Remote",
+      "password": "12345678",
+      "database": "u13db",
+      "username": "u13"
+    },
+    {
+      "previewLimit": 50,
+      "server": "postgres-db",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "Container",
+      "database": "test_postgres_db",
+      "username": "test_user",
+      "password": "test_password"
+    }
+  ]
 }

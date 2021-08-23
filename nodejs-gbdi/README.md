@@ -10,3 +10,14 @@ morgan is logging library
 
 Using nodemon in dev
 Using pm2 in prod
+
+
+## using sequelize-cli
+
+npx sequelize-cli init
+
+npx sequelize-cli model:generate \
+  --name User \
+  --attributes firstName:string,lastName:string
+
+npx sequelize-cli db:migrate

@@ -19,7 +19,7 @@ if (config.use_env_variable) {
 // but embed this code to generate the Database Schema.
 // https://stackoverflow.com/questions/28418499/how-can-i-drop-all-tables-with-sequelize-js-using-postgresql/51100381
 if (env.startsWith("development")) {
-  sequelize.sync({force: true});
+  // sequelize.sync({force: true});
 }
 
 fs

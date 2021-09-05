@@ -10,11 +10,14 @@
       "runtimeArgs": ["dev"],
       "env": {
         "PORT": "4000",
-        "NODE_ENV": "development-remote-db"
+        "NODE_ENV": "development-remote-db",
+        "JWT_SECRET": "TEST_KEY",
       },
       "runtimeExecutable": "yarn",
       "skipFiles": ["<node_internals>/**"],
-      "type": "pwa-node"
+      "type": "pwa-node",
+      // https://stackoverflow.com/questions/61817528/vscode-no-debug-adapter-can-not-send-variables
+      "console": "integratedTerminal"
     },
     {
       "name": "Launch via yarn - local DB",
@@ -22,11 +25,13 @@
       "runtimeArgs": ["dev"],
       "env": {
         "PORT": "4000",
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "JWT_SECRET": "TEST_KEY",
       },
       "runtimeExecutable": "yarn",
       "skipFiles": ["<node_internals>/**"],
-      "type": "pwa-node"
+      "type": "pwa-node",
+      "console": "integratedTerminal"
     },
     {
       "name": "Launch via npm",

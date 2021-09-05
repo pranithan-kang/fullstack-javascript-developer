@@ -6,9 +6,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const passport = require("passport");
 
 const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
+const blogRouter = require('./routes/blog');
+
+const passportJwt = require('./middlewares/passport-jwt');
 
 const app = express();
 
@@ -20,7 +24,10 @@ app.use(cookieParser());
 // This causes the localhost:port/ directly point to public/index.html
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(passport.initialize());
+
 app.use('/', indexRouter);
 app.use('/user', userRouter);
+app.use('/blog', passportJwt.isLogin, blogRouter);
 
 module.exports = app;
